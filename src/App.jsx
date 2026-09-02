@@ -33,12 +33,11 @@ function App() {
             </a>
           </div>
         </div>
-
-        
         <div className="hero-tag">
           RETARD · DEVELOPER · TINKERER
         </div>
       </section>
+
 
       {/* About section */}
       <section id="about" className="content-section">
@@ -57,20 +56,31 @@ function App() {
         </div>
       </section>
 
+
       {/* Projects section */}
       <section id="projects" className="content-section">
         <p className="section-label">02 — PROJECTS</p>
 
         <h2>THINGS I'M BUILDING</h2>
-        <div className="projects-empty">
-          <p className="project-number">NO.1</p>
-          <h3>FIRST REAL PROJECT IN PROGRESS</h3>
+        <div className="project-card">
+          <p className="project-number">NO.1--IN PROGRESS</p>
+          <h3>PORTFOLIO MANAGEMENT SYSTEM</h3>
           <p>
-            I m still building my way into development. This section will grow as I learn and make projects worth showing.
+            A web application I'm building to manage demat accounts, holdings, companies, and IPO news while learning web development.
           </p>
-          <span>POPULATING SOON</span>
+          <div className="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JAVASCRIPT</span>
+            <span>PHP</span>
+            <span>MYSQL</span>
+          </div>
+          <span className="project-status">BUILDING</span>
         </div>
       </section>
+
+
+      {/*Learning Section*/}
       <section id="learning" className="content-section learning-section">
         <p className="section-label">03-CURRENTLY LEARNING</p>
         <h2>STUFFS I'M FIGURING OUT</h2>
@@ -104,7 +114,8 @@ function App() {
         </div>
       </section>
 
-      {/* This is the fucking lab section where I showcase experiments and tinkering */}
+
+      {/* This is the lab section where I showcase experiments and tinkering */}
       <section id="lab" className="content-section lab-section">
         <p className="section-label">04 -LAB</p>
         <p className="section-intro">Things I break, investigate, modify and nearly fuck my minds on. Mostly a destructor.</p>
@@ -131,11 +142,12 @@ function App() {
         </div>
       </section>
 
+
       {/* Contact section */}
       <section id="contact" className="content-section">
         <p className="section-label">05 — CONTACT</p>
 
-        <h2>LET'S TALK and STFU</h2>
+        <h2>CONNECT WITH ME</h2>
 
         
       </section>

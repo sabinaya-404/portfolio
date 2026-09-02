@@ -1,16 +1,146 @@
-# React + Vite
+Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website I'm building while learning web development.
 
-Currently, two official plugins are available:
+The goal isn't to make a portfolio that pretends I already have years of development experience. Instead, this site is meant to grow alongside my skills, projects, experiments, and things I'm currently learning.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Tech Stack
 
-## React Compiler
+- React
+- Vite
+- JavaScript
+- CSS
+- Git
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Design
 
-## Expanding the ESLint configuration
+The visual direction combines Retro-Pop and Neo-Brutalism.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The current design uses:
+
+- Cream/beige background
+- Dot-pattern background
+- Thick black borders
+- Offset shadows
+- Rounded pill buttons
+- High-contrast colors
+- Flat vector-style UI
+- Responsive layouts
+
+The main light-mode colors are:
+
+- Canary yellow
+- Hot pink
+- Mint/turquoise
+- Cobalt blue
+
+A dark theme is also being developed using the same design system with softer colors.
+
+Current Structure
+
+The website currently contains:
+
+01 — About
+
+A short introduction about me, my interests, and the areas I'm exploring.
+
+02 — Projects
+
+A placeholder section for projects I'm building.
+
+Since I'm still early in my development journey, this section doesn't pretend that I already have a large collection of finished projects.
+
+03 — Currently Learning
+
+A collection of technologies I'm actively learning:
+
+- React
+- JavaScript
+- CSS
+- Git
+
+This section is intended to change as my learning progresses.
+
+04 — Lab
+
+A space for documenting tinkering and experimentation, particularly around:
+
+- Android
+- Linux
+- Reverse engineering
+
+05 — Contact
+
+A simple section for eventually adding ways to get in touch.
+
+Project Structure
+
+portfolio/
+├── docs/
+│    ├── decisions.md
+│    ├── notes.md
+├── public/
+├── src/
+│   ├── components/
+│   │   └── Navbar.jsx
+│   ├── App.jsx
+│   ├── index.css
+│   └── ...
+├── index.html
+├── package.json
+├── package-lock.json
+└── README.md
+
+Running the Project
+
+Make sure Node.js and npm are installed.
+
+Install the project dependencies:
+
+npm install
+
+Start the development server:
+
+npm run dev
+
+Vite will provide a local address where the website can be viewed in the browser.
+
+Current Development Status
+
+Completed
+
+- [x] React + Vite project setup
+- [x] Basic component structure
+- [x] Navbar
+- [x] Hero section
+- [x] About section
+- [x] Projects section
+- [x] Currently Learning section
+- [x] Lab section
+- [x] Contact section
+- [x] Retro-Pop / Neo-Brutalist visual direction
+- [x] CSS variables for the color system
+- [x] Responsive layout pass
+- [x] Git repository setup
+
+In Progress
+
+- [ ] System-based light/dark theme
+- [ ] Theme toggle
+- [ ] Remembering the user's theme preference
+- [ ] Mobile navigation improvements
+- [ ] Further visual polish
+
+Future
+
+- [ ] Add real projects as I build them
+- [ ] Improve accessibility
+- [ ] Add more interactive React features
+- [ ] Deploy the website
+- [ ] Continue refining the design
+
+Philosophy
+
+This portfolio is meant to document progress rather than manufacture experience.
+
+Projects will be added when they're actually built. The learning section will change as I learn new technologies, and the lab will document experiments and things I break, investigate, and fix.
