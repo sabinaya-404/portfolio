@@ -456,3 +456,39 @@ margin-top: 30px;
   font-size: 12px;
   font-weight: 900;
 }
+/*Contact section style */
+.contact-text {
+  max-width: 700px;
+  margin-bottom: 35px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.contact-link {
+  display: inline-block;
+  padding: 14px 20px;
+  border: var(--border);
+  box-shadow: 4px 4px 0 var(--foreground);
+  color: var(--foreground);
+  font-size: 14px;
+  font-weight: 900;
+  text-decoration: none;
+}
+.contact-github {
+  background: var(--yellow);
+}
+.contact-email {
+  background: var(--pink);
+}
+.contact-instagram {
+  background: var(--mint);
+}
+.contact-link:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 var(--foreground);
+transition: transform 0.20s ease, box-shadow 0.20s ease;
+}

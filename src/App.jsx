@@ -145,10 +145,20 @@ function App() {
 
 
       {/* Contact section */}
-      <section id="contact" className="content-section">
+      <section id="contact" className="content-section contact-section">
         <p className="section-label">05 — CONTACT</p>
 
         <h2>CONNECT WITH ME</h2>
+
+        <p className="contact-text">
+          Got an interesting project or question,
+          You can find me here
+        </p>
+        <div className="contact-links">
+          <a href="#" className="contact-link contact-github">GITHUB</a>
+          <a href="#" className="contact-link contact-email">EMAIL</a>
+          <a href="#" className="contact-link contact-instagram">INSTAGRAM</a>
+        </div>
 
         
       </section>
