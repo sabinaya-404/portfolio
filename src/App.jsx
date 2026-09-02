@@ -43,11 +43,12 @@ function App() {
       <section id="about" className="content-section">
         <p className="section-label">01 — ABOUT</p>
 
-        <h2>ABOUT ME</h2>
+        <h2>WHY I LIKE BUILDING THINGS</h2>
 
-        <p>
-          Currently learning web development.Interested in Linux and Android.
-        </p>
+        <p className="about-text">
+          I'm a BCA student learning web development and figuring things out by actually building it, rather memorizing definitions.
+          </p>
+          <p className="about-text"> Outside of web development, I m interested in Android, Linux and reverse engineering, if somethings can be tinkered with, I'll probably spend my day tinkering it.</p>
         <div className="about-tags">
           <span>WEB DEVELOPMENT</span>
            <span>LINUX</span>
@@ -115,10 +116,10 @@ function App() {
       </section>
 
 
-      {/* This is the lab section where I showcase experiments and tinkering */}
+      {/* LAB SECTION */}
       <section id="lab" className="content-section lab-section">
         <p className="section-label">04 -LAB</p>
-        <p className="section-intro">Things I break, investigate, modify and nearly fuck my minds on. Mostly a destructor.</p>
+        <p className="section-intro">Things I break, investigate, modify and nearly lose my minds on. Mostly a destructor.</p>
         <div className="lab-grid">
           <article className="lab-card lab-mint">
             <p className="lab-number">LAB-01</p>
