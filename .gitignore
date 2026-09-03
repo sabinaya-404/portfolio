@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+Sabinaya-Portfolio-Documentation.docx
+~$binaya-Portfolio-Documentation.docx
 
 # Editor directories and files
 .vscode/*
