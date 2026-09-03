@@ -6,7 +6,7 @@ function Hero() {
           <p className="hero-label">YOO, I'M</p>
           <h1>SABINAYA</h1>
           <p className="hero-description">
-            I poke at things until I understand why they work. Sometimes they stop working first. Noob me ＞﹏＜
+            I poke at things until I understand why they work. Sometimes they stop working first＞﹏＜
           </p>
           <div className="hero-actions">
             <a href="#projects" className="button button-dark">
