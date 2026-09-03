@@ -1,12 +1,11 @@
 import Navbar from './components/Navbar'
-
+import Footer from './components/Footer'
+import {FaGithub, FaInstagram, FaEnvelope } from 'react-icons/fa'
 function App() {
   return (
     <>
-      {/* Top navigation of the website */}
       <Navbar />
 
-      {/* Intro of me */}
       <section className="hero">
         <div className="hero-content">
           <p className="hero-label">YOO, I'M</p>
@@ -161,13 +160,30 @@ function App() {
           You can find me here
         </p>
         <div className="contact-links">
-          <a href="#" className="contact-link contact-github">GITHUB</a>
-          <a href="#" className="contact-link contact-email">EMAIL</a>
-          <a href="#" className="contact-link contact-instagram">INSTAGRAM</a>
-        </div>
+  <a
+    href="https://github.com/sabinaya-404"className="contact-link contact-github" target="_blank"
+    rel="noopener noreferrer">
+    <span>GITHUB</span>
+    <FaGithub size={32} />
+  </a>
 
-        
+  <a
+    href="mailto:sabinayakhadka3@gmail.com"
+    className="contact-link contact-email"
+  >
+    <span>EMAIL</span>
+    <FaEnvelope size={32} />
+  </a>
+
+  <a href="https://www.instagram.com/sbkh_21/"
+    className="contact-link contact-instagram"
+    target="_blank" rel="noopener noreferrer">
+    <span>INSTAGRAM</span>
+    <FaInstagram size={32} />
+  </a>
+</div>  
       </section>
+      <Footer />
     </>
   )
 }
