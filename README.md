@@ -1,146 +1,78 @@
-Personal Portfolio
+# Sabinaya's Portfolio ( `.` )
 
-A personal portfolio website I'm building while learning web development.
+A personal portfolio built with React, Vite, and plain CSS while learning web development and figuring out how things work under the hood.
 
-The goal isn't to make a portfolio that pretends I already have years of development experience. Instead, this site is meant to grow alongside my skills, projects, experiments, and things I'm currently learning.
+The goal is not to pretend I have 10 years of senior enterprise experience.Actually I have zero. It is just an honest space to document stuff I am building, technologies I am learning, and things I accidentally break in the lab. (・_・;)
 
-Tech Stack
+## Tech Stack (ง'̀-'́)ง
 
-- React
-- Vite
-- JavaScript
-- CSS
-- Git
+- **Core:** React 19, JavaScript (ESNext)
+- **Bundler:** Vite
+- **Styling:** Vanilla CSS with custom properties (no Tailwind, pure CSS grind)
+- **Icons:** `react-icons`
+- **Version Control:** Git & GitHub
 
-Design
 
-The visual direction combines Retro-Pop and Neo-Brutalism.
+## Design System: Retro-Pop & Neo-Brutalism (⌐■_■)
 
-The current design uses:
+I wanted something punchy and tactile instead of another sterile corporate template.
 
-- Cream/beige background
-- Dot-pattern background
-- Thick black borders
-- Offset shadows
-- Rounded pill buttons
-- High-contrast colors
-- Flat vector-style UI
-- Responsive layouts
+- **Colors:** High-contrast palette (Canary Yellow, Hot Pink, Mint, Cobalt Blue)
+- **Borders & Shadows:** Thick 3px black borders with 6px hard offset drop shadows
+- **Background:** Cream base with a subtle radial dot grid
+- **Vibe:** Vibe is so important tho, no cap
 
-The main light-mode colors are:
-
-- Canary yellow
-- Hot pink
-- Mint/turquoise
-- Cobalt blue
-
-A dark theme is also being developed using the same design system with softer colors.
-
-Current Structure
-
-The website currently contains:
-
-01 — About
-
-A short introduction about me, my interests, and the areas I'm exploring.
-
-02 — Projects
-
-A placeholder section for projects I'm building.
-
-Since I'm still early in my development journey, this section doesn't pretend that I already have a large collection of finished projects.
-
-03 — Currently Learning
-
-A collection of technologies I'm actively learning:
-
-- React
-- JavaScript
-- CSS
-- Git
-
-This section is intended to change as my learning progresses.
-
-04 — Lab
-
-A space for documenting tinkering and experimentation, particularly around:
-
-- Android
-- Linux
-- Reverse engineering
-
-05 — Contact
-
-A simple section for eventually adding ways to get in touch.
-
-Project Structure
+## Folder Structure (*・ω・)ﾉ
 
 portfolio/
 ├── docs/
-│    ├── decisions.md
-│    ├── notes.md
+│   ├── decisions.md       # ADRs (Why Neo-Brutalism, why plain CSS)
+│   └── notes.md           # Scratchpad, bugs smashed, and lessons learned
 ├── public/
+│   └── favicon.svg        # Custom tab icon
 ├── src/
-│   ├── components/
-│   │   └── Navbar.jsx
-│   ├── App.jsx
-│   ├── index.css
-│   └── ...
+│   ├── components/        # Isolated component modules + paired stylesheets
+│   │   ├── Navbar.jsx   / Navbar.css
+│   │   ├── Hero.jsx     / Hero.css
+│   │   ├── About.jsx    / About.css
+│   │   ├── Projects.jsx / Projects.css
+│   │   ├── Learning.jsx / Learning.css
+│   │   ├── Lab.jsx      / Lab.css
+│   │   ├── Contact.jsx  / Contact.css
+│   │   └── Footer.jsx   / Footer.css
+│   ├── App.jsx            # Main view coordinator
+│   ├── index.css          # Design tokens & global resets
+│   └── main.jsx           # Application entry point
 ├── index.html
 ├── package.json
-├── package-lock.json
 └── README.md
 
-Running the Project
+## How to Run Locally ( ´ ▽ ` )b
 
-Make sure Node.js and npm are installed.
+# 1. Clone the repo
+git clone https://github.com/sabinaya-404/portfolio.git
 
-Install the project dependencies:
-
+# 2. Install dependencies
 npm install
 
-Start the development server:
-
+# 3. Fire up the local dev server
 npm run dev
 
-Vite will provide a local address where the website can be viewed in the browser.
 
-Current Development Status
+## Current Status & Roadmap ( ◡‿◡ )
 
-Completed
+- [x] React 19 + Vite setup
+- [x] Neo-Brutalist design tokens & responsive grid
+- [x] Modular component architecture (one JSX + one CSS per section)
+- [x] Real working links for GitHub, Email, and Instagram
+- [x] Documented architectural decisions & dev notes
+- [ ] System light/dark theme toggle with localStorage
+- [ ] Mobile navigation drawer improvements
+- [ ] Live deployment
+    Running out of patience to deploy it ♨_♨
 
-- [x] React + Vite project setup
-- [x] Basic component structure
-- [x] Navbar
-- [x] Hero section
-- [x] About section
-- [x] Projects section
-- [x] Currently Learning section
-- [x] Lab section
-- [x] Contact section
-- [x] Retro-Pop / Neo-Brutalist visual direction
-- [x] CSS variables for the color system
-- [x] Responsive layout pass
-- [x] Git repository setup
+## Philosophy ¯\_(ツ)_/¯
 
-In Progress
+> "Document progress rather than manufacture experience."
 
-- [ ] System-based light/dark theme
-- [ ] Theme toggle
-- [ ] Remembering the user's theme preference
-- [ ] Mobile navigation improvements
-- [ ] Further visual polish
-
-Future
-
-- [ ] Add real projects as I build them
-- [ ] Improve accessibility
-- [ ] Add more interactive React features
-- [ ] Deploy the website
-- [ ] Continue refining the design
-
-Philosophy
-
-This portfolio is meant to document progress rather than manufacture experience.
-
-Projects will be added when they're actually built. The learning section will change as I learn new technologies, and the lab will document experiments and things I break, investigate, and fix.
+Projects get listed when they are actually built. The learning section shifts as I pick up new concepts, and the lab documents experiments with Linux distros, Android custom ROMs, and reverse engineering. Tbh, I generated this md file >.<, m too lazy to write.

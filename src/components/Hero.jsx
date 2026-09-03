@@ -6,7 +6,7 @@ function Hero() {
           <p className="hero-label">YOO, I'M</p>
           <h1>SABINAYA</h1>
           <p className="hero-description">
-            I like figuring out how things works and reverse engineer it.
+            I poke at things until I understand why they work. Sometimes they stop working first. Noob me ＞﹏＜
           </p>
           <div className="hero-actions">
             <a href="#projects" className="button button-dark">
@@ -34,7 +34,7 @@ function Hero() {
   </div>
 </div>
         <div className="hero-tag">
-          RETARD · DEVELOPER · TINKERER
+          STUDENT · DEVELOPER · TINKERER
         </div>
       </section>
     )

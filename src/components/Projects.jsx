@@ -4,7 +4,7 @@ function Projects() {
         <section id="projects" className="content-section">
         <p className="section-label">02 — PROJECTS</p>
 
-        <h2>THINGS I'M BUILDING</h2>
+        <h2>THINGS I'M TRYING TO MAKE WORK</h2>
         <div className="project-card">
   <div className="project-top">
     <p className="project-number">NO. 01 — IN PROGRESS</p>

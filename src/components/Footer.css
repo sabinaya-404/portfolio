@@ -2,8 +2,8 @@
 .footer {
   margin: 100px 20px 20px;
   border: var(--border);
-  background: var(--foreground);
-  color: var(--background);
+  background: var(--inverted-bg);
+  color: var(--inverted-text);
   box-shadow: var(--shadow);
 }
 .footer-main {

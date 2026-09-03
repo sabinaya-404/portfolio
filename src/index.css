@@ -1,7 +1,15 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 40px;
+}
 :root {
   --pattern: rgba(17, 17, 17, 0.22);
   --background: #f5edda;
+  --surface: #f5edda;
   --foreground: #111111;
+
+  --inverted-bg: #111111;
+  --inverted-text: #f5edda;
 
   --yellow: #ffd928;
   --pink: #ff4f9a;
@@ -29,15 +37,13 @@ body {
       );
       background-size: 16px 16px;
 }
-
-
 .content-section {
   max-width: 1100px;
   margin: 100px auto;
   padding: 40px;
   border: var(--border);
   box-shadow: var(--shadow);
-  background: var(--background);
+  background: var(--surface);
 }
 .section-label {
   margin: 0 0 20px;
@@ -51,10 +57,6 @@ body {
   line-height: 0.95;
   letter-spacing: -3px;
 }
-
-/* Main About paragraph */
-
-
 /* Responsiveness */
 @media (max-width: 700px) {
   

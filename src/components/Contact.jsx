@@ -5,7 +5,7 @@ function Contact() {
         <section id="contact" className="content-section contact-section">
         <p className="section-label">05 — CONTACT</p>
 
-        <h2>CONNECT WITH ME</h2>
+        <h2>WANT TO YAP?</h2>
 
         <p className="contact-text">
           Got an interesting project or question,

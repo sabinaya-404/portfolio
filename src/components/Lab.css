@@ -1,13 +1,10 @@
 .lab-section {
-  background: var(--foreground);
-  color: var(--background);
+  background: var(--inverted-bg);
+  color: var(--inverted-text);
 }
 
 .lab-section .section-label {
-  color: var(--background);
-}
-.lab-section h2 {
-  max-width: 800px;
+  color: var(--inverted-text);
 }
 .section-intro {
   max-width: 650px;
