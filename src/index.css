@@ -94,7 +94,6 @@ nav div {
   font-size: 13px;
   font-weight: 800;
 }
-/* hero button */
 .hero-actions {
 display: flex;
 gap: 16px;
@@ -114,7 +113,7 @@ margin-top: 30px;
 }
 
 .button-dark {
-  background: var(--pink);
+  background: var(--foreground);
   color: var(--background);
 }
 .button-pink {
@@ -124,6 +123,121 @@ margin-top: 30px;
 .button:hover {
   transform: translate(3px, 3px);
   box-shadow: 1px 1px 0 var(--foreground)
+}
+/* Style for hero visual */
+.hero-visual {
+  position: relative;
+  min-height: 350px;
+}
+.visual-circle {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border: var(--border);
+  border-radius: 50%;
+  background: var(--pink);
+  top: 20px;
+  right: 40px;
+  box-shadow: var(--shadow);
+}
+.visual-circle {
+  animation: float-circle 3s ease-in-out infinite;
+}
+.visual-square {
+  animation: float-square 5s ease-in-out infinite;
+}
+@keyframes float-circle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+@keyframes float-square {
+  0%, 100% {
+    transform: rotate(-8deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-8deg) translateY(10px);
+  }
+}
+.visual-square {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: var(--border);
+  background: var(--yellow);
+  bottom: 35px;
+  left: 30px;
+  transform: rotate(-8deg);
+  box-shadow: var(--shadow);
+}
+.visual-window {
+  position: absolute;
+  width: 280px;
+  height: 210px;
+  border: var(--border);
+  background: var(--background);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: var(--shadow);
+  z-index: 2;
+}
+.window-bar {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  border-bottom: var(--border);
+  background: var(--blue);
+}
+.window-bar span {
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--foreground);
+  border-radius: 50%;
+  background: var(--pink);
+}
+.window-screen {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 25px;
+}
+.window-screen div{
+  height: 12px;
+  border: 2px solid var(--foreground);
+  background: var(--mint);
+
+}
+.window-screen div:nth-child(1) {
+  width: 75%;
+}
+.window-screen div:nth-child(2) {
+  width: 55%;
+  background: var(--pink);
+}
+.window-screen div:nth-child(3) {
+  width: 85%;
+  background: var(--blue);
+}
+.hero-visual {
+  min-height: 300px;
+}
+.visual-window {
+  width: 240px;
+  height: 180px;
+}
+.visual-circle {
+  width: 140px;
+  height: 140px;
+  right: 10px;
+}
+.visual-square {
+  width: 90px;
+  height: 90px;
+  left: 10px;
 }
 .content-section {
   max-width: 1100px;
@@ -503,99 +617,7 @@ margin-top: 30px;
   box-shadow: 1px 1px 0 var(--foreground);
 transition: transform 0.20s ease, box-shadow 0.20s ease;
 }
-/* Style for hero visual */
-.hero-visual {
-  position: relative;
-  min-height: 350px;
-}
-.visual-circle {
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  border: var(--border);
-  border-radius: 50%;
-  background: var(--pink);
-  top: 20px;
-  right: 40px;
-  box-shadow: var(--shadow);
-}
-.visual-square {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  border: var(--border);
-  background: var(--yellow);
-  bottom: 35px;
-  left: 30px;
-  transform: rotate(-8deg);
-  box-shadow: var(--shadow);
-}
-.visual-window {
-  position: absolute;
-  width: 280px;
-  height: 210px;
-  border: var(--border);
-  background: var(--background);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: var(--shadow);
-  z-index: 2;
-}
-.window-bar {
-  display: flex;
-  gap: 8px;
-  padding: 10px;
-  border-bottom: var(--border);
-  background: var(--blue);
-}
-.window-bar span {
-  width: 12px;
-  height: 12px;
-  border: 2px solid var(--foreground);
-  border-radius: 50%;
-  background: var(--pink);
-}
-.window-screen {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 25px;
-}
-.window-screen div{
-  height: 12px;
-  border: 2px solid var(--foreground);
-  background: var(--mint);
 
-}
-.window-screen div:nth-child(1) {
-  width: 75%;
-}
-.window-screen div:nth-child(2) {
-  width: 55%;
-  background: var(--pink);
-}
-.window-screen div:nth-child(3) {
-  width: 85%;
-  background: var(--blue);
-}
-.hero-visual {
-  min-height: 300px;
-}
-.visual-window {
-  width: 240px;
-  height: 180px;
-}
-.visual-circle {
-  width: 140px;
-  height: 140px;
-  right: 10px;
-}
-.visual-square {
-  width: 90px;
-  height: 90px;
-  left: 10px;
-}
 /* Footer Style */
 .footer {
   margin: 100px 20px 20px;
