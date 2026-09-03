@@ -1,0 +1,31 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 20px;
+  padding: 16px 20px;
+
+  border: var(--border);
+  box-shadow: var(--shadow);
+}
+nav a {
+  color: var(--foreground);
+  text-decoration: none;
+  font-weight: 700;
+}
+nav div {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 700px) {
+    nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  nav div {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}

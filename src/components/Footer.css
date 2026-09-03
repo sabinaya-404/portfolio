@@ -1,0 +1,46 @@
+/* Footer Style */
+.footer {
+  margin: 100px 20px 20px;
+  border: var(--border);
+  background: var(--foreground);
+  color: var(--background);
+  box-shadow: var(--shadow);
+}
+.footer-main {
+  padding: 50px;
+  border-bottom: var(--border);
+}
+.footer-main h2 {
+  margin: 0 0 15px;
+  font-size: clamp(45px, 8vw, 90px);
+  line-height: 0.9;
+  letter-spacing: -4px;
+}
+.footer-main p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 900;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 25px;
+  font-size: 12px;
+  font-weight: 900;
+}
+@media (max-width: 700px) {
+    .footer {
+    margin: 80px 12px 12px;
+  }
+  .footer-main {
+    padding: 35px 25px;
+  }
+  .footer-main h2 {
+    letter-spacing: -2px;
+  } 
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
