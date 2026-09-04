@@ -1,7 +1,7 @@
 # Design Decisions
 
-## Why the hell I made this decision.md file?
-  Idk, I researched(intense googling/AI), they said and I quote "In software engineering, these are called ADRs (Architectural Decision Records). Recruiters and senior devs love seeing these because they show *why* you made choices instead of just copying tutorials." 
+## Architectural Design Records
+ This document records the key technical and design choices made while building this portfolio, explaining the rationale behind each decision. 
 
 ## 1. Why Neo-Brutalism?
  Just wanted to try different theme and less generic than a typical developer portfolio.

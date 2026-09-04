@@ -58,7 +58,6 @@ npm install
 # 3. Fire up the local dev server
 npm run dev
 
-
 ## Current Status & Roadmap ( ◡‿◡ )
 
 - [x] React 19 + Vite setup
@@ -66,8 +65,8 @@ npm run dev
 - [x] Modular component architecture (one JSX + one CSS per section)
 - [x] Real working links for GitHub, Email, and Instagram
 - [x] Documented architectural decisions & dev notes
+- [x] Mobile navigation drawer improvements
 - [ ] System light/dark theme toggle with localStorage
-- [ ] Mobile navigation drawer improvements
 - [ ] Live deployment
     Running out of patience to deploy it ♨_♨
 
@@ -75,4 +74,4 @@ npm run dev
 
 > "Document progress rather than manufacture experience."
 
-Projects get listed when they are actually built. The learning section shifts as I pick up new concepts, and the lab documents experiments with Linux distros, Android custom ROMs, and reverse engineering. Tbh, I generated this md file >.<, m too lazy to write.
+Projects get listed when they are actually built. The learning section shifts as I pick up new concepts, and the lab documents experiments with Linux distros, Android custom ROMs, and reverse engineering.
