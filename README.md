@@ -68,7 +68,7 @@ npm run dev
 - [x] Mobile navigation drawer improvements
 - [ ] System light/dark theme toggle with localStorage
 - [ ] Live deployment
-    Running out of patience to deploy it ♨_♨
+    
 
 ## Philosophy ¯\_(ツ)_/¯
 
