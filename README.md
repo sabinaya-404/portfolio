@@ -23,7 +23,7 @@ I wanted something punchy and tactile instead of another sterile corporate templ
 - **Vibe:** Vibe is so important tho, no cap
 
 ## Folder Structure (*・ω・)ﾉ
-
+```text
 portfolio/
 ├── docs/
 │   ├── decisions.md       # ADRs (Why Neo-Brutalism, why plain CSS)
@@ -47,8 +47,9 @@ portfolio/
 ├── package.json
 └── README.md
 
+```
 ## How to Run Locally ( ´ ▽ ` )b
-
+```bash
 # 1. Clone the repo
 git clone https://github.com/sabinaya-404/portfolio.git
 
@@ -57,7 +58,7 @@ npm install
 
 # 3. Fire up the local dev server
 npm run dev
-
+```
 ## Current Status & Roadmap ( ◡‿◡ )
 
 - [x] React 19 + Vite setup
