@@ -21,16 +21,35 @@ function Hero() {
   <div className="visual-square"></div>
   <div className="visual-window">
     <div className="window-bar">
+      <div className="window-dots">
       <span></span>
       <span></span>
       <span></span>
+      </div>
+      <span className="window-title">sabinaya@dev-station:~</span>
     </div>
-
-    <div className="window-screen">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
+      <div className="window-content">
+        <div className="terminal-line">
+          <span className="prompt">$</span>
+          <span className="cmd">whoami</span>
+        </div>
+        <p className="output">&gt; Sabinaya (BCA Student / Tinkerer)</p>
+        <div className="terminal-line">
+          <span className="prompt">$</span>
+          <span className="cmd">cat focus.txt</span>
+        </div>
+        <p className="output">&gt; Full-Stack Web, Linux &amp; Android internals</p>
+        <div className="terminal-line">
+          <span className="prompt">$</span>
+          <span className="cmd">status --current</span>
+        </div>
+        <p className="output">&gt; Debugging CSS & brewing tea</p>
+        <div className="terminal-line">
+          <span className="prompt">$</span>
+          <span className="cursor"></span>
+        </div>
+      </div>
+    
   </div>
 </div>
         <div className="hero-tag">

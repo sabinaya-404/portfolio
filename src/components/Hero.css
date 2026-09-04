@@ -120,52 +120,88 @@ margin-top: 30px;
 }
 .visual-window {
   position: absolute;
-  width: 280px;
-  height: 210px;
+  width: clamp(290px, 90%, 420px);
   border: var(--border);
-  background: var(--background);
+  background: var(--foreground);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: var(--shadow);
   z-index: 2;
+  font-family: 'Courier New', Courier, monospace;
 }
 .window-bar {
   display: flex;
-  gap: 8px;
-  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
   border-bottom: var(--border);
   background: var(--blue);
 }
-.window-bar span {
-  width: 12px;
-  height: 12px;
-  border: 2px solid var(--foreground);
+.window-dots {
+  display: flex;
+  gap: 6px;
+}
+.window-dots span {
+  width: 10px;
+  height: 10px;
+  border: 1.5px solid var(--foreground);
   border-radius: 50%;
   background: var(--pink);
 }
-.window-screen {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 25px;
-}
-.window-screen div{
-  height: 12px;
-  border: 2px solid var(--foreground);
-  background: var(--mint);
 
+.window-dots span:nth-child(2) {
+  background: var(--yellow)
 }
-.window-screen div:nth-child(1) {
-  width: 75%;
+.window-dots span:nth-child(3) {
+  background: var(--mint);
 }
-.window-screen div:nth-child(2) {
-  width: 55%;
-  background: var(--pink);
+.window-title {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--background);
+  letter-spacing: 0.5px;
 }
-.window-screen div:nth-child(3) {
-  width: 85%;
-  background: var(--blue);
+.window-content {
+  padding: 14px 16px;
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--background);
+}
+.terminal-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+.terminal-line:first-child {
+  margin-top: 0;
+}
+.prompt {
+  color: var(--mint);
+  font-weight: 900;
+}
+.cmd {
+  color: #ffffff;
+  font-weight: 700;
+}
+.output {
+  margin: 3px 0 0 14px;
+  color: var(--yellow);
+  font-size: 12px;
+}
+/* For blinking cursor */
+.cursor {
+  display: inline-block;
+  width: 7px;
+  height: 14px;
+  background:var(--mint);
+  animation: cursor-blink 1s steps(2, start) infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 100% {opacity: 1;}
+  50% {opacity: 0;}
 }
 @media (max-width: 700px) {
   .hero-visual {
