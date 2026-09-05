@@ -17,9 +17,9 @@ function App() {
       <About />
       {/* Projects section */}
       <Projects />
-      {/*Learning Section*/}
+      {/*Learning section*/}
       <Learning />
-      {/* LAB SECTION */}
+      {/*Lab section*/}
       <Lab />
       {/* Contact section */}
       <Contact />
