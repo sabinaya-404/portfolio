@@ -32,8 +32,16 @@ nav {
   color: var(--foreground);
   text-decoration: none;
   font-weight: 700;
+  padding: 6px 12px;
+  border: 2px solid transparent;
+  transition: all 0.15s ease;
 }
-
+.nav-links a.active {
+  background: var(--yellow);
+  color: #111111;
+  border: 2px solid var(--foreground);
+  box-shadow: 2px 2px 0 var(--foreground);
+}
 .theme-toggle {
   padding: 8px 12px;
   border: var(--border);
