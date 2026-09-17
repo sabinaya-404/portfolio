@@ -1,33 +1,162 @@
-import { useState } from 'react'
-import './Contact.css'
-import { FaGithub, FaInstagram, FaEnvelope, FaCheck } from 'react-icons/fa'
+import { useEffect, useState } from "react";
+import { useForm } from "@formspree/react";
+import "./Contact.css";
+import { FaGithub, FaInstagram, FaEnvelope, FaCheck } from "react-icons/fa";
 
 function Contact() {
-  const [copied, setCopied] = useState(false)
+  const [state, handleSubmit] = useForm("mqpakbdb");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText('sabinayakhadka3@gmail.com')
-    setCopied(true)
+  const [copied, setCopied] = useState(false);
+  useEffect(() => {
+    if (state.succeeded) {
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    }
+  }, [state.succeeded]);
 
-    // Reset back to normal after 2 seconds (2000ms)
-    setTimeout(() => {
-      setCopied(false)
-    }, 2000)
-  }
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormData((previous) => ({
+      ...previous,
+      [name]: value,
+    }));
+  };
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText("sabinayakhadka3@gmail.com");
+      setCopied(true);
+
+      setTimeout(() => {
+        setCopied(false);
+      }, 2000);
+    } catch {
+      setCopied(false);
+    }
+  };
 
   return (
     <section id="contact" className="content-section contact-section">
-      <p className="section-label">05 — CONTACT</p>
+      <p className="section-label">05 / CONTACT</p>
 
       <h2>WANT TO YAP?</h2>
 
       <p className="contact-text">
-        Got an interesting project or question,
-        You can find me here
+        Got something interesting to build, break, or talk about? Say hi.
       </p>
 
+      <form
+        className="contact-form"
+        onSubmit={handleSubmit}
+        aria-label="Contact form"
+      >
+        <input
+          type="text"
+          name="_gotcha"
+          tabIndex="-1"
+          autoComplete="off"
+          className="contact-honeypot"
+          aria-hidden="true"
+        />
+
+        <div className="form-row">
+          <div className="form-group">
+            <label htmlFor="name">YOUR NAME</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Your name"
+              autoComplete="name"
+              minLength={2}
+              maxLength={80}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="email">YOUR EMAIL</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="you@example.com"
+              autoComplete="email"
+              required
+            />
+          </div>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="subject">WHAT'S UP?</label>
+          <input
+            id="subject"
+            name="subject"
+            type="text"
+            value={formData.subject}
+            onChange={handleChange}
+            placeholder="Project, question, collaboration, random thought..."
+            minLength={3}
+            maxLength={120}
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="message">MESSAGE</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Write whatever you came here to say."
+            rows="7"
+            minLength={10}
+            maxLength={2000}
+            required
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="contact-submit"
+          disabled={state.submitting}
+        >
+          {state.submitting ? "SENDING..." : "SEND MESSAGE"}
+        </button>
+
+        {state.succeeded && (
+          <p className="form-success" role="status">
+            Message sent. I'll get back to you soon.
+          </p>
+        )}
+        {state.errors && (
+          <p className="form-error" role="alert">
+            Couldn't send the message. Please try again.
+          </p>
+        )}
+      </form>
+
+      <div className="contact-divider">
+        <span>OR FIND ME ELSEWHERE</span>
+      </div>
+
       <div className="contact-links">
-        {/* GitHub Link */}
         <a
           href="https://github.com/sabinaya-404"
           className="contact-link contact-github"
@@ -35,21 +164,24 @@ function Contact() {
           rel="noopener noreferrer"
         >
           <span>GITHUB</span>
-          <FaGithub size={32} />
+          <FaGithub size={32} aria-hidden="true" />
         </a>
 
-        {/* Copy Email Button */}
         <button
           type="button"
           onClick={handleCopyEmail}
-          className={`contact-link contact-email ${copied ? 'copied' : ''}`}
-          title="Click to copy email address"
+          className={`contact-link contact-email ${copied ? "copied" : ""}`}
+          title="Copy email address"
         >
-          <span>{copied ? 'COPIED TO CLIPBOARD!' : 'EMAIL (COPY)'}</span>
-          {copied ? <FaCheck size={28} /> : <FaEnvelope size={32} />}
+          <span>{copied ? "COPIED TO CLIPBOARD!" : "EMAIL (COPY)"}</span>
+
+          {copied ? (
+            <FaCheck size={28} aria-hidden="true" />
+          ) : (
+            <FaEnvelope size={32} aria-hidden="true" />
+          )}
         </button>
 
-        {/* Instagram Link */}
         <a
           href="https://www.instagram.com/sbkh_21/"
           className="contact-link contact-instagram"
@@ -57,11 +189,11 @@ function Contact() {
           rel="noopener noreferrer"
         >
           <span>INSTAGRAM</span>
-          <FaInstagram size={32} />
+          <FaInstagram size={32} aria-hidden="true" />
         </a>
-      </div>  
+      </div>
     </section>
-  )
+  );
 }
 
-export default Contact
+export default Contact;
