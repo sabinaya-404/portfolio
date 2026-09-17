@@ -1,40 +1,67 @@
+import { useState } from 'react'
 import './Contact.css'
-import {FaGithub, FaInstagram, FaEnvelope } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaEnvelope, FaCheck } from 'react-icons/fa'
+
 function Contact() {
-    return (
-        <section id="contact" className="content-section contact-section">
-        <p className="section-label">05 — CONTACT</p>
+  const [copied, setCopied] = useState(false)
 
-        <h2>WANT TO YAP?</h2>
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText('sabinayakhadka3@gmail.com')
+    setCopied(true)
 
-        <p className="contact-text">
-          Got an interesting project or question,
-          You can find me here
-        </p>
-        <div className="contact-links">
-  <a
-    href="https://github.com/sabinaya-404"className="contact-link contact-github" target="_blank"
-    rel="noopener noreferrer">
-    <span>GITHUB</span>
-    <FaGithub size={32} />
-  </a>
+    // Reset back to normal after 2 seconds (2000ms)
+    setTimeout(() => {
+      setCopied(false)
+    }, 2000)
+  }
 
-  <a
-    href="mailto:sabinayakhadka3@gmail.com"
-    className="contact-link contact-email"
-  >
-    <span>EMAIL</span>
-    <FaEnvelope size={32} />
-  </a>
+  return (
+    <section id="contact" className="content-section contact-section">
+      <p className="section-label">05 — CONTACT</p>
 
-  <a href="https://www.instagram.com/sbkh_21/"
-    className="contact-link contact-instagram"
-    target="_blank" rel="noopener noreferrer">
-    <span>INSTAGRAM</span>
-    <FaInstagram size={32} />
-  </a>
-</div>  
-      </section>
-    )
+      <h2>WANT TO YAP?</h2>
+
+      <p className="contact-text">
+        Got an interesting project or question,
+        You can find me here
+      </p>
+
+      <div className="contact-links">
+        {/* GitHub Link */}
+        <a
+          href="https://github.com/sabinaya-404"
+          className="contact-link contact-github"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>GITHUB</span>
+          <FaGithub size={32} />
+        </a>
+
+        {/* Copy Email Button */}
+        <button
+          type="button"
+          onClick={handleCopyEmail}
+          className={`contact-link contact-email ${copied ? 'copied' : ''}`}
+          title="Click to copy email address"
+        >
+          <span>{copied ? 'COPIED TO CLIPBOARD!' : 'EMAIL (COPY)'}</span>
+          {copied ? <FaCheck size={28} /> : <FaEnvelope size={32} />}
+        </button>
+
+        {/* Instagram Link */}
+        <a
+          href="https://www.instagram.com/sbkh_21/"
+          className="contact-link contact-instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>INSTAGRAM</span>
+          <FaInstagram size={32} />
+        </a>
+      </div>  
+    </section>
+  )
 }
+
 export default Contact
