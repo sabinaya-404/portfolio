@@ -1,4 +1,4 @@
-# Sabinaya's Portfolio ( `.` )
+# Sabinaya's Portfolio 
 
 A personal portfolio built with React, Vite, and plain CSS while learning web development and figuring out how things work under the hood.
 
