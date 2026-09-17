@@ -2,6 +2,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 40px;
 }
+
 :root {
   --pattern: rgba(17, 17, 17, 0.22);
   --background: #f5edda;
@@ -16,14 +17,14 @@ html {
   --mint: #65e6c1;
   --blue: #4267e8;
 
-  --border: 3px solid
-  var(--foreground);
-    --shadow: 6px 6px 0
-    var(--foreground);
+  --border: 3px solid var(--foreground);
+  --shadow: 6px 6px 0 var(--foreground);
 }
+
 * {
   box-sizing: border-box;
 }
+
 [data-theme="dark"] {
   --pattern: rgba(255, 255, 255, 0.07);
   --background: #131313;
@@ -41,18 +42,20 @@ html {
   --border: 3px solid #000000;
   --shadow: 6px 6px 0 #000000;
 }
-body {
-      margin: 0;
-      background: var(--background);
-      color: var(--foreground);
-      font-family: Arial, sans-serif;
 
-      background-image: radial-gradient(
-        var(--pattern) 1px,
-        transparent 1px
-      );
-      background-size: 16px 16px;
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, sans-serif;
+
+  background-image: radial-gradient(
+    var(--pattern) 1px,
+    transparent 1px
+  );
+  background-size: 16px 16px;
 }
+
 .content-section {
   max-width: 1100px;
   margin: 100px auto;
@@ -61,27 +64,28 @@ body {
   box-shadow: var(--shadow);
   background: var(--surface);
 }
+
 .section-label {
   margin: 0 0 20px;
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 2px;
 }
+
 .content-section h2 {
   margin: 0 0 25px;
   font-size: clamp(40px, 7vw, 80px);
   line-height: 0.95;
   letter-spacing: -3px;
 }
+
 @media (max-width: 700px) {
-  
   .content-section {
-    margin: 70px 12px; 
+    margin: 70px 12px;
     padding: 30px 25px;
   }
-  
+
   .content-section h2 {
     font-size: clamp(38px, 11vw, 60px);
   }
-  
 }

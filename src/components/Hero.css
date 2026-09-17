@@ -8,9 +8,10 @@
   overflow: hidden;
 }
 .hero-content {
-  max-width: 900px;
+  position: relative;
+  z-index: 3;
+  max-width: 650px;
 }
-
 .hero-label {
   margin: 0;
   font-size: 14px;
@@ -31,6 +32,7 @@
   font-size: 22px;
   font-weight: 600;
 }
+
 .hero-tag {
   display: inline-block;
   margin-top: 40px;
@@ -40,13 +42,15 @@
   font-size: 13px;
   font-weight: 800;
 }
+
 .hero-actions {
-display: flex;
-gap: 16px;
-flex-wrap: wrap;
-margin-top: 30px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
-/* styling used by both buttons */
+
+/* Styling used by both buttons */
 .button {
   display: inline-block;
   padding: 14px 20px;
@@ -54,25 +58,33 @@ margin-top: 30px;
   font-weight: 800;
   border: var(--border);
   box-shadow: 4px 4px 0 var(--foreground);
-  border-radius: 999px;
+  border-radius: 0;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 .button-dark {
   background: var(--foreground);
   color: var(--background);
 }
+
 .button-pink {
   background: var(--pink);
   color: var(--foreground);
 }
+
 .button:hover {
   transform: translate(3px, 3px);
-  box-shadow: 1px 1px 0 var(--foreground)
+  box-shadow: 1px 1px 0 var(--foreground);
 }
-/* Style for hero visual */
+.button:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 4px;
+}
 .hero-visual {
-  position: relative;
-  min-height: 350px;
+  position: absolute;
+  width: 45%;
+  height: 100%;
+  top: 0;
+  right: 0;
 }
 .visual-circle {
   position: absolute;
@@ -84,29 +96,9 @@ margin-top: 30px;
   top: 20px;
   right: 40px;
   box-shadow: var(--shadow);
-}
-.visual-circle {
   animation: float-circle 3s ease-in-out infinite;
 }
-.visual-square {
-  animation: float-square 5s ease-in-out infinite;
-}
-@keyframes float-circle {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-}
-@keyframes float-square {
-  0%, 100% {
-    transform: rotate(-8deg) translateY(0);
-  }
-  50% {
-    transform: rotate(-8deg) translateY(10px);
-  }
-}
+
 .visual-square {
   position: absolute;
   width: 120px;
@@ -117,12 +109,34 @@ margin-top: 30px;
   left: 30px;
   transform: rotate(-8deg);
   box-shadow: var(--shadow);
+  animation: float-square 5s ease-in-out infinite;
 }
+
+@keyframes float-circle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes float-square {
+  0%, 100% {
+    transform: rotate(-8deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(-8deg) translateY(10px);
+  }
+}
+
 .visual-window {
   position: absolute;
-  width: clamp(290px, 90%, 420px);
+  width: clamp(290px, 90%, 480px);
   border: var(--border);
-  background: #141414; /* Always stays dark like a real terminal */
+  background: #141414;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -130,6 +144,7 @@ margin-top: 30px;
   z-index: 2;
   font-family: 'Courier New', Courier, monospace;
 }
+
 .window-bar {
   display: flex;
   align-items: center;
@@ -138,10 +153,12 @@ margin-top: 30px;
   border-bottom: var(--border);
   background: var(--blue);
 }
+
 .window-dots {
   display: flex;
   gap: 6px;
 }
+
 .window-dots span {
   width: 10px;
   height: 10px;
@@ -151,72 +168,120 @@ margin-top: 30px;
 }
 
 .window-dots span:nth-child(2) {
-  background: var(--yellow)
+  background: var(--yellow);
 }
+
 .window-dots span:nth-child(3) {
   background: var(--mint);
 }
+
 .window-title {
   font-size: 11px;
   font-weight: 800;
   color: var(--background);
   letter-spacing: 0.5px;
 }
+
 .window-content {
   padding: 14px 16px;
   font-size: 12.5px;
   line-height: 1.4;
   color: var(--background);
 }
+
 .terminal-line {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-top: 10px;
 }
+
 .terminal-line:first-child {
   margin-top: 0;
 }
+
 .prompt {
   color: var(--mint);
   font-weight: 900;
 }
+
 .cmd {
   color: #ffffff;
   font-weight: 700;
 }
+
 .output {
   margin: 3px 0 0 14px;
   color: var(--yellow);
   font-size: 12px;
 }
-/* For blinking cursor */
+
 .cursor {
   display: inline-block;
   width: 7px;
   height: 14px;
-  background:var(--mint);
+  background: var(--mint);
   animation: cursor-blink 1s steps(2, start) infinite;
 }
 
 @keyframes cursor-blink {
-  0%, 100% {opacity: 1;}
-  50% {opacity: 0;}
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 @media (max-width: 700px) {
-  .hero-visual {
-    min-height: 240px;
-  }
-    .hero {
+  .hero {
     margin: 40px 12px;
     padding: 40px 25px;
   }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button {
+    text-align: center;
+  }
+
+  .hero-visual {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    min-height: 0;
+    margin-top: 20px;
+  }
+
+  .visual-window {
+    width: 100%;
+  }
+
   .hero h1 {
     font-size: clamp(56px, 18vw, 100px);
     letter-spacing: -3px;
   }
+
   .hero-description {
     font-size: 20px;
     font-weight: 600;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .visual-circle,
+  .visual-square,
+  .cursor {
+    animation: none;
+  }
+
+  .button {
+    transition: none;
   }
 }
