@@ -6,30 +6,31 @@
 .lab-section .section-label {
   color: var(--inverted-text);
 }
+
 .section-intro {
   max-width: 650px;
   margin: 0;
-
   font-size: 20px;
   line-height: 1.5;
   font-weight: 600;
 }
+
 .lab-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
   gap: 20px;
   margin-top: 40px;
 }
+
 .lab-card {
   padding: 25px;
   border: var(--border);
-  box-shadow: 5px 5px 0 #000000;
+  box-shadow: var(--shadow);
   color: #111111;
 }
+
 .lab-number {
   margin: 0 0 30px;
-
   font-size: 12px;
   font-weight: 900;
   letter-spacing: 1px;
@@ -37,14 +38,12 @@
 
 .lab-card h3 {
   margin: 0 0 15px;
-
   font-size: 26px;
   line-height: 1;
 }
 
 .lab-card > p:last-child {
   margin: 0;
-
   font-size: 16px;
   line-height: 1.5;
   font-weight: 600;
@@ -61,11 +60,9 @@
 .lab-pink {
   background: var(--pink);
 }
+
 @media (max-width: 700px) {
-    .lab-grid {
+  .lab-grid {
     grid-template-columns: 1fr;
-  }
-  .lab-card {
-    padding: 25px;
   }
 }
