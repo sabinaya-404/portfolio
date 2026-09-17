@@ -34,20 +34,12 @@
     font-size: 12px;
     font-weight: 900;
 }
-.project-status {
-  display: inline-block;
-  padding: 10px 16px;
-  border: 2px solid var(--foreground);
-  background: var(--pink);
-  font-size: 13px;
-  font-weight: 900;
-}
 .project-bottom {
   display: flex;
   justify-content: flex-end;
   margin-top: 30px;
 }
-.project-bottom a {
+.project-link {
   display: inline-block;
   padding: 14px 20px;
   border: var(--border);
@@ -63,40 +55,23 @@
   transform: translate(4px, 4px);
   box-shadow: 1px 1px 0 var(--foreground);
 }
-.projects-empty {
-  margin-top: 40px;
-  padding: 35px;
-  border: var(--border);
-  box-shadow: var(--shadow);
-  background: var(--mint);
-  max-width: 750px;
-}
-.projects-empty .project-number {
-  margin: 0 0 25px;
-}
-.projects-empty h3 {
-  margin: 0 0 20px;
-  font-size: clamp(20px, 5vw, 48px);
-  line-height: 1;
-}
-.projects-empty p:not(.project-number) {
-  max-width: 600px;
-  margin: 0 0 25px;
-  font-size: 18px;
-  line-height: 1.5;
+.project-features {
+  max-width: 700px;
+  margin: 0 0 30px;
+  padding-left: 22px;
+  font-size: 17px;
+  line-height: 1.6;
   font-weight: 600;
 }
-.projects-empty span {
-  display: inline-block;
-  padding: 10px 14px;
-  border: 2px solid var(--foreground);
-  font-size: 12px;
-  font-weight: 900;
+
+.project-features li {
+  margin-bottom: 6px;
+}
+.project-link:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 4px;
 }
 @media (max-width: 700px) {
-    .project-grid {
-    grid-template-columns: 1fr;
-  }
   .project-card {
     padding: 25px;
   }

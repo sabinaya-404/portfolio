@@ -2,18 +2,23 @@ import './Projects.css'
 function Projects() {
     return (
         <section id="projects" className="content-section">
-        <p className="section-label">02 — PROJECTS</p>
+        <p className="section-label">02 / PROJECTS</p>
 
         <h2>THINGS I'M TRYING TO MAKE WORK</h2>
         <div className="project-card">
   <div className="project-top">
-    <p className="project-number">NO. 01 — IN PROGRESS</p>
+    <p className="project-number">NO. 01 / IN PROGRESS</p>
   </div>
   <h3>PORTFOLIO MANAGEMENT SYSTEM</h3>
-  <p className="project-description">
-    A web application I'm building to manage demat accounts, holdings,
-    companies, and IPO news while learning full-stack web development.
-  </p>
+<p className="project-description">
+  A web application for managing demat accounts, holdings, companies,
+  and IPO news, built with PHP and MySQL.
+</p>
+<ul className="project-features">
+  <li>Manage multiple demat accounts</li>
+  <li>Track holdings and companies</li>
+  <li>Manage IPO news through an admin panel</li>
+</ul>
   <div className="project-tags">
     <span>HTML</span>
     <span>CSS</span>
@@ -22,9 +27,8 @@ function Projects() {
     <span>MYSQL</span>
   </div>
   <div className="project-bottom">
-   {/* <span>FULL-STACK WEB APP</span><br></br> */}
     <a href="https://github.com/sabinaya-404/portfolio-management-system" 
-    className="project-status" target = "_blank" rel = "noopener noreferrer">VIEW ON GITHUB</a>
+    className="project-link" target = "_blank" rel = "noopener noreferrer">VIEW ON GITHUB</a>
   </div>
 </div>
       </section>
