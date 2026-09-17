@@ -24,7 +24,23 @@ html {
 * {
   box-sizing: border-box;
 }
+[data-theme="dark"] {
+  --pattern: rgba(255, 255, 255, 0.07);
+  --background: #131313;
+  --surface: #1d1d1d;
+  --foreground: #f0eae1;
 
+  --yellow: #eac54f;
+  --pink: #e27396;
+  --mint: #6ecba8;
+  --blue: #5b7ae6;
+
+  --inverted-bg: #1a1a1a;
+  --inverted-text: #f0eae1;
+
+  --border: 3px solid #000000;
+  --shadow: 6px 6px 0 #000000;
+}
 body {
       margin: 0;
       background: var(--background);
@@ -57,7 +73,6 @@ body {
   line-height: 0.95;
   letter-spacing: -3px;
 }
-/* Responsiveness */
 @media (max-width: 700px) {
   
   .content-section {
