@@ -44,3 +44,27 @@
     gap: 8px;
   }
 }
+.scroll-top {
+    margin-top: 30px;
+    padding: 14px 20px;
+    border: var(--border);
+    box-shadow: var(--shadow);
+    background: var(--yellow);
+    color: var(--foreground);
+    font: inherit;
+    font-size: 13px;
+    font-weight: 900;
+    cursor: pointer;
+    border-radius: 0;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.scroll-top:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 2px 2px 0 var(--foreground);
+}
+
+.scroll-top:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 4px;
+}
