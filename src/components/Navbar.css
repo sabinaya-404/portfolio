@@ -42,28 +42,9 @@ nav {
   border: 2px solid var(--foreground);
   box-shadow: 2px 2px 0 var(--foreground);
 }
-.theme-toggle {
-  padding: 8px 12px;
-  border: var(--border);
-  background: var(--mint);
-  color: #111111;
-  box-shadow: 3px 3px 0 var(--foreground);
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 900;
-  cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.theme-toggle:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0 var(--foreground);
-}
-
 .menu-toggle {
   display: none;
 }
-
 @media (max-width: 700px) {
   nav {
     position: relative;
