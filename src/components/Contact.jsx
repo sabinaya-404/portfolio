@@ -15,11 +15,13 @@ function Contact() {
   const [copied, setCopied] = useState(false);
   useEffect(() => {
     if (state.succeeded) {
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
+      Promise.resolve().then(() => {
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
       });
     }
   }, [state.succeeded]);
