@@ -58,7 +58,7 @@ nav {
 
   .menu-toggle {
     display: block;
-    padding: 8px 12px;
+    padding: 18px 12px;
     border: var(--border);
     background: var(--pink);
     color: var(--foreground);
