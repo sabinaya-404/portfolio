@@ -1,16 +1,15 @@
-# Sabinaya's Portfolio 
+# Sabinaya's Portfolio
 
-A personal portfolio built with React, Vite, and plain CSS while learning web development and figuring out how things work under the hood.
+A personal portfolio showcasing systems and web development projects while learning through hands-on building and experimentation.
 
-The goal is not to pretend I have 10 years of senior enterprise experience.Actually I have zero. It is just an honest space to document stuff I am building, technologies I am learning, and things I accidentally break in the lab. (・_・;)
+The goal is to honestly document projects I've built, technologies I'm learning, and things I break in the lab - no exaggeration, just real progress. (・_・;)
 
 ## Tech Stack (ง'̀-'́)ง
 
-- **Core:** React 19, JavaScript (ESNext)
+- **Framework:** React 19
 - **Bundler:** Vite
-- **Styling:** Vanilla CSS with custom properties (no Tailwind, pure CSS grind)
-- **Icons:** `react-icons`
-- **Version Control:** Git & GitHub
+- **Styling:** Vanilla CSS with custom properties
+- **Icons:** react-icons
 
 
 ## Design System: Retro-Pop & Neo-Brutalism (⌐■_■)
@@ -21,6 +20,28 @@ I wanted something punchy and tactile instead of another sterile corporate templ
 - **Borders & Shadows:** Thick 3px black borders with 6px hard offset drop shadows
 - **Background:** Cream base with a subtle radial dot grid
 - **Vibe:** Vibe is so important tho, no cap
+
+## Projects Showcased
+
+This portfolio features two honest projects I've built while learning:
+
+### Portfolio Management System
+A web application for managing demat accounts, holdings, companies, and IPO news.
+
+**What it does:** Provides interfaces to manage multiple demat accounts, track stock holdings and company information, and monitor upcoming IPO opportunities through an admin panel.
+
+**Technologies:** HTML, CSS, JavaScript, PHP, MySQL
+
+**Source:** https://github.com/sabinaya-404/portfolio-management-system
+
+### Linux System Dashboard
+A C/Linux system monitoring dashboard providing real-time system statistics.
+
+**What it does:** Displays live system information including CPU usage, memory, disk I/O, network statistics, and process information through both a terminal user interface and HTTP API.
+
+**Technologies:** C, Linux, /proc, /sys, POSIX sockets, HTTP
+
+**Source:** https://github.com/sabinaya-404/Linux_System_Dashboard
 
 ## Folder Structure (*・ω・)ﾉ
 ```text
@@ -59,16 +80,15 @@ npm install
 # 3. Fire up the local dev server
 npm run dev
 ```
-## Current Status & Roadmap ( ◡‿◡ )
+## Current Status
 
 - [x] React 19 + Vite setup
-- [x] Neo-Brutalist design tokens & responsive grid
-- [x] Modular component architecture (one JSX + one CSS per section)
-- [x] Real working links for GitHub, Email, and Instagram
-- [x] Documented architectural decisions & dev notes
-- [x] Mobile navigation drawer improvements
+- [x] Neo-Brutalist design tokens & responsive layout
+- [x] Modular component architecture (JSX + CSS per section)
+- [x] Functional contact form with Formspree
+- [x] Accessibility improvements (skip link, focus management, touch targets)
+- [x] Accurate project showcases with honest descriptions
 - [ ] System light/dark theme toggle with localStorage
-- [ ] Live deployment
     
 
 ## Philosophy ¯\_(ツ)_/¯
