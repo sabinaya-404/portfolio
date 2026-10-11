@@ -1,8 +1,15 @@
 import "./Hero.css";
+import { motion } from "motion/react";
+
 function Hero() {
   return (
     <section className="hero">
-      <div className="hero-content">
+      <motion.div
+        className="hero-content"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <span className="hero-label">YOO, I'M</span>
         <h1>SABINAYA</h1>
         <p className="hero-description">
@@ -17,7 +24,7 @@ function Hero() {
             CONTACT ME
           </a>
         </div>
-      </div>
+      </motion.div>
       <div className="hero-visual">
         <div className="visual-circle"></div>
         <div className="visual-square"></div>
@@ -55,7 +62,14 @@ function Hero() {
           </div>
         </div>
       </div>
-      <div className="hero-tag">STUDENT · DEVELOPER · TINKERER</div>
+      <motion.div
+        className="hero-tag"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+      >
+        STUDENT · DEVELOPER · TINKERER
+      </motion.div>
     </section>
   );
 }
