@@ -60,6 +60,57 @@ function Projects() {
     className="project-link" target = "_blank" rel = "noopener noreferrer">VIEW ON GITHUB</a>
   </div>
 </div>
+<div className="project-card">
+  <div className="project-top">
+    <p className="project-number">NO. 03 / COMPLETED</p>
+  </div>
+  <h3>TINYSYS</h3>
+  <p className="project-description">
+    A lightweight Windows system-information utility built with Python. It
+    prints a quick snapshot of the current machine from the command line.
+  </p>
+  <ul className="project-features">
+    <li>Reports operating system, hostname, user, and CPU details</li>
+    <li>Shows total and available RAM</li>
+    <li>Displays system drive usage and uptime</li>
+  </ul>
+  <div className="project-tags">
+    <span>PYTHON</span>
+    <span>WINDOWS</span>
+    <span>CLI</span>
+    <span>CTYPES</span>
+  </div>
+  <div className="project-bottom">
+    <a href="https://github.com/sabinaya-404/TinySys"
+    className="project-link" target="_blank" rel="noopener noreferrer">VIEW ON GITHUB</a>
+  </div>
+</div>
+<div className="project-card">
+  <div className="project-top">
+    <p className="project-number">NO. 04 / COMPLETED</p>
+  </div>
+  <h3>BITCHORD LOCAL SERVER</h3>
+  <p className="project-description">
+    A Python-based local music server for streaming a personal music library
+    across devices. Run it on your own machine and connect from a BitChord
+    client.
+  </p>
+  <ul className="project-features">
+    <li>Scans and searches your local music library</li>
+    <li>Serves original audio files with HTTP byte-range support</li>
+    <li>Connects to the BitChord client over a local or private network</li>
+  </ul>
+  <div className="project-tags">
+    <span>PYTHON</span>
+    <span>HTTP</span>
+    <span>MUSIC</span>
+    <span>LOCAL SERVER</span>
+  </div>
+  <div className="project-bottom">
+    <a href="https://github.com/sabinaya-404/bitchord-local-server"
+    className="project-link" target="_blank" rel="noopener noreferrer">VIEW ON GITHUB</a>
+  </div>
+</div>
       </section>
     )
 }
